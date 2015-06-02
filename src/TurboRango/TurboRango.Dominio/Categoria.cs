@@ -2,7 +2,7 @@
 using System.ComponentModel;
 namespace TurboRango.Dominio
 {
-    enum Categoria
+    public enum Categoria
     {
         [Description("Comum")]
         COMUM,
