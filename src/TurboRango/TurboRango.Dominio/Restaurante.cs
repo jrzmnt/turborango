@@ -3,10 +3,15 @@ namespace TurboRango.Dominio
 {
     class Restaurante
     { 
-        private int Capacidade { get; set; }
-        private string Nome { get; set; }
-        private Localizacao Localizacao { get; set; }
-        private Contato Contato { get; set; }
+        /// <summary>
+        /// Capacidade (lotação máxima) do restaurante
+        /// </summary>
+        internal int Capacidade { get; set; }
+        internal string Nome { get; set; }
+        internal Localizacao Localizacao { get; set; }
+        internal Contato Contato { get; set; }
+        internal Categoria Categoria { get; set; }
+
 
     }
 }
