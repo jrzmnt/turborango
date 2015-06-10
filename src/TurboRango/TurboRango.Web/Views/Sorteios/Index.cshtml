@@ -12,8 +12,10 @@
 
 @Session Scripts{
 @Scripts.Render("~/bundles/haversine")
+
 <script>
     var qtdRestaurantes = @ViewBag.QtdRestaurantes;
+    //alert(qtdRestaurantes);
 
     navigator.geolocation.getCurrentPosition(
         function success(resultado) {
@@ -22,10 +24,17 @@
 
             $.get('@Url.Action("Restaurantes", "Restaurantes")')
                 .done(function(response) {
-                    response.restaurantes.forEach(function(r) {
-                        //console.log(r.Localizacao);
-                        var distancia = haversine(posicaoAtual, { latitude: r.Localizacao.Latitude, longitude: r.Localizacao.Longitude }, {unit: 'km'});
+
+                    response.restaurantes.sort(function(r1, r2) {
+
+                        if (r1.Localizacao !== null && r2.Localizacao !== null) {
+                            var distancia1 = haversine(posicaoAtual, { latitude: r1.Localizacao.Latitude, longitude: r1.Localizacao.Longitude }, {unit: 'km'});
+                            var distancia2 = haversine(posicaoAtual, { latitude: r2.Localizacao.Latitude, longitude: r2.Localizacao.Longitude }, {unit: 'km'});
+                            return distancia1 > distancia2;
+                        }
                     });
+
+                    console.log(response.restaurantes);
                 });
         },
         function error(err) {
@@ -33,6 +42,7 @@
         },
         { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
     );
-
 </script>
+
+
 }
