@@ -11,7 +11,7 @@ namespace TurboRango.ImportadorXML
 {
     class CarinhaQueManipulaOBanco
     {
-        
+
         private string connectionString;
 
         public CarinhaQueManipulaOBanco(string connectionString)
@@ -24,13 +24,13 @@ namespace TurboRango.ImportadorXML
 
         internal void Inserir(Contato contato)
         {
-            
-            using(var connection = new SqlConnection(this.connectionString))
-            { 
+
+            using (var connection = new SqlConnection(this.connectionString))
+            {
                 string comandoSQL = "INSERT INTO [dbo].[Contato] ([Site], [Telefone]) VALUES (@Site, @Telefone)";
-            
-                using(var inserirContato = new SqlCommand(comandoSQL, connection))
-                { 
+
+                using (var inserirContato = new SqlCommand(comandoSQL, connection))
+                {
                     inserirContato.Parameters.Add("@Site", SqlDbType.NVarChar).Value = contato.Site;
                     inserirContato.Parameters.Add("@Telefone", SqlDbType.NVarChar).Value = contato.Telefone;
 
@@ -43,8 +43,8 @@ namespace TurboRango.ImportadorXML
 
         internal IEnumerable<Contato> GetContatos()
         {
-             using(var connection = new SqlConnection(this.connectionString))
-            { 
+            using (var connection = new SqlConnection(this.connectionString))
+            {
                 string comandoSQL = "SELECT [Site],[Telefone] FROM [TurboRango_dev].[dbo].[Contato]";
                 using (var lerContatos = new SqlCommand(comandoSQL, connection))
                 {
@@ -58,6 +58,8 @@ namespace TurboRango.ImportadorXML
                     }
                 }
             }
+
+            return null;
         }
     }
 }
