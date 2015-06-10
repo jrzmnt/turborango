@@ -14,8 +14,8 @@ namespace TurboRango.Dominio
         Churrascaria,
         [Description("Cozinha Japonesa")]
         CozinhaJaponesa,
-        [Description("Fast Food")]
-        FastFood,
+        [Description("FastFood")]
+        Fastfood,
         [Description("Pizzaria")]
         Pizzaria
     }

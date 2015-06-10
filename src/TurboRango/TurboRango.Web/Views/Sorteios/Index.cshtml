@@ -10,17 +10,29 @@
 @*<h3>@ViewBag.QtdRestaurantes</h3>*@
 <h3>@ViewBag.QtdRestaurantes</h3>
 
-
-
+@Session Scripts{
+@Scripts.Render("~/bundles/haversine")
 <script>
-    @Scripts.Render("~/bundles/haversine");
-
     var qtdRestaurantes = @ViewBag.QtdRestaurantes;
 
-    $.get('@Url.Action("Restaurantes","Restaurantes")')
-        .done(function(response){
-            response.restaurantes.forEach(function(r){
-                console.log(r.localizacao);
-            });
-        });
+    navigator.geolocation.getCurrentPosition(
+        function success(resultado) {
+
+            var posicaoAtual = resultado.coords;
+
+            $.get('@Url.Action("Restaurantes", "Restaurantes")')
+                .done(function(response) {
+                    response.restaurantes.forEach(function(r) {
+                        //console.log(r.Localizacao);
+                        var distancia = haversine(posicaoAtual, { latitude: r.Localizacao.Latitude, longitude: r.Localizacao.Longitude }, {unit: 'km'});
+                    });
+                });
+        },
+        function error(err) {
+            console.error(err);
+        },
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+    );
+
 </script>
+}

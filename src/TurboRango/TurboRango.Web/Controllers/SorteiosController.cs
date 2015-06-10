@@ -7,10 +7,8 @@ using TurboRango.Web.Models;
 
 namespace TurboRango.Web.Controllers
 {
-
     public class SorteiosController : Controller
     {
-
         ApplicationDbContext db = new ApplicationDbContext();
         
         public static int GetIluminismo()
@@ -25,6 +23,5 @@ namespace TurboRango.Web.Controllers
             ViewBag.QtdRestaurantes = db.Restaurantes.Count();
             return View();
         }
-
     }
 }
