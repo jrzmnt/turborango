@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Categoria.cs" />
     <Compile Include="Entidade.cs" />
+    <Compile Include="Promocao.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Contato.cs" />
     <Compile Include="Localizacao.cs" />

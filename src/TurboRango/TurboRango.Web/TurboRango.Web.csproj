@@ -174,10 +174,16 @@
     <Compile Include="Migrations\201506082001170_CriarEntidades.Designer.cs">
       <DependentUpon>201506082001170_CriarEntidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506111745076_Nova Entidade - Promocao.cs" />
+    <Compile Include="Migrations\201506111745076_Nova Entidade - Promocao.Designer.cs">
+      <DependentUpon>201506111745076_Nova Entidade - Promocao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CriarPromocaoViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="PromocaosController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -242,6 +248,11 @@
     <Content Include="Views\Restaurantes\Edit.cshtml" />
     <Content Include="Views\Restaurantes\Index.cshtml" />
     <Content Include="Views\Sorteios\Index.cshtml" />
+    <Content Include="Views\Promocaos\Create.cshtml" />
+    <Content Include="Views\Promocaos\Delete.cshtml" />
+    <Content Include="Views\Promocaos\Details.cshtml" />
+    <Content Include="Views\Promocaos\Edit.cshtml" />
+    <Content Include="Views\Promocaos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -265,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506082001170_CriarEntidades.resx">
       <DependentUpon>201506082001170_CriarEntidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506111745076_Nova Entidade - Promocao.resx">
+      <DependentUpon>201506111745076_Nova Entidade - Promocao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
