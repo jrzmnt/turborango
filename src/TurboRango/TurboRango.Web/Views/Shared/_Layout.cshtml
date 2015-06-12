@@ -30,6 +30,19 @@
                     }
                     
                 </ul>
+                <ul class="nav navbar-nav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Promoções", "Index", "promocaos")</li>
+                    }
+                </ul>
+                <ul class="nav navbar-nav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Ache Rápido", "Index", "sorteios")</li>
+                    }
+                </ul>
+
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
