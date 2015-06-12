@@ -18,7 +18,7 @@ namespace TurboRango.Web
         // GET: Promocaos
         public ActionResult Index()
         {
-            return View(db.Promocaos.ToList());
+            return View(db.Promocaos.Include(x => x.Restaurante).ToList());
         }
 
         // GET: Promocaos/Details/5
