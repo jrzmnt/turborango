@@ -1,31 +1,31 @@
 ﻿@{
     ViewBag.Title = "TurboRango";
 }
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 
-<div class="jumbotron">
-    <h1>TurboRango</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="jumbotron" style="text-align:center; background-image:url('http://www.dailyvedas.com/wp-content/uploads/2014/04/fap-09.jpg');">
+    <h1 style="font-size:150px;">TurboRango</h1>
+    <p class="lead" style="padding-top:20px; font-size:40px;">Seu melhor guia de restaurante é aqui.</p>
+    <p><a href="/Restaurantes" class="btn btn-primary btn-lg">Encontre o seu Restaurante &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Food</h2>
+        <h2 style="color:#f39c12">Com fome?</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            O TurboRango reconhece a sua localização e faz um sorteio entre os restaurantes mais próximos para você!
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="/sorteios">Mate minha fome!</a></p>
     </div>
     <div class="col-md-4">
-        <h2>For</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2 style="color:#2ecc71">Muita fome pouca grana?</h2>
+        <p>O TurboRango possui uma lista de ofertas oferecidas pelos restaurantes cadastrados. O que faltou para ir comer fora e pagar muito barato?</p>
+        <p><a class="btn btn-default" href="/promocaos">Tô sem grana!</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Free or No ;) </h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-4 ">
+        <h2 style="color:#e74c3c">Seja um associado</h2>
+        <p>Seu restaurante ainda não está cadastrado? Aproveite e cadastre o seu restaurante agora mesmo e possua a liberdade para cadastrar diversas promoções. Venha fazer parte do TurboRango.</p>
+        <p><a class="btn btn-default" href="/Restaurantes/Create">Cadastre-se!</a></p>
     </div>
 </div>

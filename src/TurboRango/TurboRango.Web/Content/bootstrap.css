@@ -406,9 +406,12 @@ p {
 
 .lead {
   margin-bottom: 20px;
-  font-size: 16.099999999999998px;
+  margin-top: 30px;
+  font-size: 40px;
   font-weight: 200;
   line-height: 1.4;
+  font-family: 'Ubuntu', sans-serif;
+  color:black;
 }
 
 @media (min-width: 768px) {
@@ -4928,18 +4931,21 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
-  padding: 30px;
+  padding: 50px;
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
   background-color: #eeeeee;
+  text-align:center;
 }
 
 .jumbotron h1 {
   line-height: 1;
-  color: inherit;
+  color:#ecf0f1;
+  font-family: 'Indie Flower', cursive;
+  font-size:200px;
 }
 
 .jumbotron p {
@@ -6812,5 +6818,5 @@ td.visible-print {
   th.hidden-print,
   td.hidden-print {
     display: none !important;
-  }
+  } 
 }
